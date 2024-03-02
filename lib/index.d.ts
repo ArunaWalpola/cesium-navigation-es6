@@ -1,6 +1,6 @@
 import { Rectangle, Viewer } from "cesium";
 
-declare module "cesium-navigation-es6" {
+declare module "@arunawalpola/cesium-navigation-es6" {
     export interface NavigationOptions {
         // 用于在使用重置导航重置地图视图时设置默认视图控制。接受的值是Cesium.Cartographic 和 Cesium.Rectangle.
         defaultResetView?: Rectangle
@@ -27,8 +27,7 @@ declare module "cesium-navigation-es6" {
         zoomInSvg?: string
         zoomOutSvg?: string
     }
-    class CesiumNavigation {
+    export default class CesiumNavigation {
         constructor(viewer: Viewer, options: NavigationOptions)
     }
-    export = CesiumNavigation;
 }
